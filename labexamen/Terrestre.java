@@ -10,5 +10,14 @@ package labexamen;
  * @author jcgof
  */
 public class Terrestre extends Planeta{
+
+    public Terrestre(String nombre, int tamano, double peso, int cordx, int cordy) {
+        super(nombre, tamano, peso, cordx, cordy);
+    }
+
+    @Override
+    public String toString() {
+        return "Terrestre{" + super.toString();
+    }
     
 }

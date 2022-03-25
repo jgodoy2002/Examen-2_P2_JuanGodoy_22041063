@@ -11,4 +11,15 @@ package labexamen;
  */
 public class Gaseoso extends Planeta{
     
+    public Gaseoso(String nombre, int tamano, double peso, int cordx, int cordy) {
+        super(nombre, tamano, peso, cordx, cordy);
+    }
+
+    @Override
+    public String toString() {
+        return "Gaseoso{" + super.toString();
+    }
+    
+    
+    
 }

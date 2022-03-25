@@ -63,6 +63,11 @@ public class Planeta {
     public void setCordy(int cordy) {
         this.cordy = cordy;
     }
+
+    @Override
+    public String toString() {
+        return "Planeta{" + "nombre=" + nombre + ", tamano=" + tamano + ", peso=" + peso + ", cordx=" + cordx + ", cordy=" + cordy + '}';
+    }
     
     
     
