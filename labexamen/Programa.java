@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 package labexamen;
-
+import java.util.*;
+import java.io.*;
 /**
  *
  * @author jcgof
@@ -43,6 +44,24 @@ public class Programa extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Planetas");
+        javax.swing.tree.DefaultMutableTreeNode treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Mercurio");
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Venus");
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Tierra");
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Marte");
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Jupiter");
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Saturno");
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Urano");
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Neptuno");
+        treeNode1.add(treeNode2);
+        jTree1.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
         jScrollPane1.setViewportView(jTree1);
 
         jLabel1.setText("Planeta 1:");
@@ -56,10 +75,25 @@ public class Programa extends javax.swing.JFrame {
         jLabel4.setText("Planeta 2:");
 
         jpublic.setText("Publicos");
+        jpublic.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jpublicMouseClicked(evt);
+            }
+        });
 
         jb_colisionar.setText("Colisionarlos");
+        jb_colisionar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_colisionarMouseClicked(evt);
+            }
+        });
 
         jb_crear.setText("Crear Cientifico");
+        jb_crear.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_crearMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -132,6 +166,22 @@ public class Programa extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jb_colisionarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_colisionarMouseClicked
+        String planeta1, planeta2;
+        if(true){
+            JOptionPane.showMessageDialog(null, "Se colisiono")
+        }
+        
+    }//GEN-LAST:event_jb_colisionarMouseClicked
+
+    private void jb_crearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_crearMouseClicked
+        String nombre;
+    }//GEN-LAST:event_jb_crearMouseClicked
+
+    private void jpublicMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpublicMouseClicked
+        
+    }//GEN-LAST:event_jpublicMouseClicked
 
     /**
      * @param args the command line arguments
